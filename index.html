@@ -95,6 +95,13 @@
 
             .banner h1 {
                 font-size: 3em;
+                margin: 0 auto;
+                width:fit-content;
+            }
+
+            .banner-text {
+                width: fit-content;
+                margin: 0 auto;
             }
 
             main {
@@ -258,6 +265,19 @@
                 margin-left: 1em;
             }
 
+            .headshot {
+                height: auto;
+                width: 40%;
+                border: 1px solid white;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: auto;
+            }
+
+            .img-headshot {
+                width: 100%;
+                height: auto;
+            }
             @media (max-width: 500px) {
                 main {
                     width: 100%;
@@ -283,7 +303,13 @@
             </nav>
             <div class="banner">
                 <section id="welcome-section">
-                    <h1>Hello from Patrick...</h1>
+                    <div class="headshot">
+                        <img class="img-headshot" src="headshot.png" alt="Photo of Patrick Warner" />
+                    </div>
+                    <div class="banner-text">
+                        <h1>Patrick Warner</h1>
+                        <p>@pnwarner</p>
+                    </div>
                 </section>
             </div>
         </header>
