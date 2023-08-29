@@ -95,13 +95,20 @@
 
             .banner h1 {
                 font-size: 3em;
-                margin: 0 auto;
                 width:fit-content;
             }
 
             .banner-text {
+                margin-left: 1em;
                 width: fit-content;
-                margin: 0 auto;
+            }
+
+            #welcome-section {
+                display: flex;
+                height: 80%;
+                width: 80%;
+                align-items: center;
+                justify-content: space-between;
             }
 
             main {
@@ -268,10 +275,11 @@
             .headshot {
                 height: auto;
                 width: 40%;
-                border: 1px solid white;
+                min-width: 200px;
+                max-width: 300px;
+                border: 4px solid var(--color-3);
                 border-radius: 50%;
                 overflow: hidden;
-                margin: auto;
             }
 
             .img-headshot {
@@ -286,6 +294,28 @@
                 svg {
                     width: 25px;
                     height: 25px;
+                }
+
+                #welcome-section {
+                    flex-direction: column;
+                }
+
+                .banner h1 {
+                    font-size: 2em;
+                }
+
+            }
+
+            @media (max-width: 700px) {
+                #welcome-section {
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+            }
+
+            @media (max-width: 800px) {
+                #welcome-section {
+                    justify-content:space-evenly;
                 }
             }
 
