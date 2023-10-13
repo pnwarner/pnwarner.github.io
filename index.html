@@ -1,461 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
+        <title>Portfolio of Patrick Warner</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width: device-width, initial-scale=1.0">
-        <title>Patrick Warner - Developer portfolio</title>
-        <style>
-            :root {
-                --color-1: #071952;
-                --color-2: #0B666A;
-                --color-3: #35A29F;
-                --color-4: #97FEED;
-            }
-
-            *, *::before, *::after {
-                box-sizing: inherit;
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-            html {
-                box-sizing: border-box;
-            }
-
-            body {
-                display: block;
-                min-height: 100vh;
-                height: 100%;
-                width: 100%;
-                background-color: var(--color-1);
-                /*color: rgb(200,200,200);*/
-                background: linear-gradient(
-                    180deg,
-                    var(--color-1) 25%,
-                    var(--color-2) 50%,
-                    var(--color-3) 75%,
-                    var(--color-4) 100%
-                    );
-                color: var(--color-4);
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 14px;
-            }
-
-            header {
-                width: 100%;
-            }
-
-            #navbar {
-                display: flex;
-                width: 100%;
-                height: 50px;
-                background-color: var(--color-3);
-                justify-content: space-between;
-                align-items: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                font-weight: bolder;
-                z-index: 2;
-            }
-
-            #navbar a {
-                margin-left: 1em;
-                /*margin-top: 0.5em;*/
-            }
-
-            #navbar a:hover {
-                color: white;
-            }
-
-            #navbar p:hover {
-                color: white;
-            }
-
-            #navbar #nav-links {
-                margin-right: 1em;
-                margin-top: 0.5em;
-            }
-
-
-            .banner {
-                display: flex;
-                width: 100%;
-                min-height: 300px;
-                background-color: var(--color-2);
-                justify-content: center;
-                align-items: center;
-                margin-top: 50px;
-                border-bottom: 3px solid var(--color-3);
-                font-family: helvetica, sans-serif;
-            }
-
-            .banner h1 {
-                font-size: 3em;
-                width:fit-content;
-            }
-
-            .banner-text {
-                margin-left: 1em;
-                width: fit-content;
-            }
-
-            #welcome-section {
-                display: flex;
-                height: 80%;
-                width: 80%;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            main {
-                width: 90%;
-                min-height: 400px;
-                margin: 2em auto;
-                background-color: var(--color-2); 
-                border-radius: 10px;
-                border: 3px solid var(--color-3);
-                padding: 1em;
-            }
-
-            main section {
-                min-height: 100px;
-                width: 100%;
-                margin-bottom: 1.5em;
-                background-color: var(--color-3);
-                border-radius: 10px;
-                padding: 1em;
-            }
-
-            .about-title {
-                margin-top: 1em;
-            }
-
-            .about-paragraph {
-                margin-top: 1em;
-            }
-
-            .about-lists {
-                display: flex;
-                align-content: center;
-                justify-content: space-around;
-                margin-top: 2em;
-                flex-wrap: wrap;
-            }
-
-            .about-lists h3 {
-                text-align: center;
-                margin-top: 0.5em;
-            }
-
-            .about-lists li {
-                margin-top: 0.25em;
-                list-style: circle;
-            }
-
-            .about-lists-list {
-                margin: 0 2em 0 2em;
-            }
-
-            .no-list-style {
-                list-style: none;
-            }
-
-            main section ul {
-                width: max-content;
-                min-width: 150px;
-            }
-
-            main section ul li {
-                color: var(--color-1);
-                list-style: none;
-            }
-
-            main section ul li h3 {
-                color: var(--color-1);
-            }
-
-            main section ul li p {
-                margin-left: 1em;
-                margin-bottom: 1em;
-                font-size: 0.9em;
-                opacity: 70%;
-            }
-
-            hr {
-                color: var(--color-1);
-            }
-
-            main section::last-of-type {
-                margin-bottom: 0;
-            }
-
-            main section h2 {
-                text-align: center;
-            }
-
-            footer {
-                width: 100%;
-                min-height: 200px;
-                background-color: var(--color-3);
-            }
-
-            a {
-                text-decoration: none;
-                color: var(--color-4);
-            }
-
-            footer {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                border-top: 3px solid var(--color-4);
-            }
-
-            footer ul {
-                color: white;
-                list-style: none;
-                margin-left: 2em;
-            }
-
-            footer a {
-                color: white;
-            }
-
-            #links {
-                display: flex;
-                width: 50%;
-                justify-content: space-around;
-                margin-right: 2em;
-            }
-
-            #contact-name {
-                font-weight: bold;
-                font-size: 1.5em;
-            }
-
-            #contact-location {
-                font-style: italic;
-            }
-
-            #contact-email {
-                font-weight: bold;
-                font-size: 0.75em;
-            }
-
-            svg {
-                height: 50px;
-                width: 50px;
-            }
-
-            #projects {
-                align-items: center;
-            }
-
-            .project-tile h2 {
-                color: var(--color-1) 
-            }
-
-            .project-title {
-                font-weight: bold;
-            }
-
-            .item-list {
-                width: 100%;
-            }
-
-            .item-list li {
-                margin-top: 0.5em;
-                margin-left: 1em;
-            }
-
-            .headshot {
-                height: auto;
-                width: 40%;
-                min-width: 200px;
-                max-width: 300px;
-                border: 4px solid var(--color-3);
-                border-radius: 50%;
-                overflow: hidden;
-            }
-
-            .img-headshot {
-                width: 100%;
-                height: auto;
-            }
-            @media (max-width: 500px) {
-                main {
-                    width: 100%;
-                }
-
-                svg {
-                    width: 25px;
-                    height: 25px;
-                }
-
-                #welcome-section {
-                    flex-direction: column;
-                }
-
-                .banner h1 {
-                    font-size: 2em;
-                }
-
-            }
-
-            @media (max-width: 700px) {
-                #welcome-section {
-                    flex-direction: column;
-                    justify-content: space-around;
-                }
-            }
-
-            @media (min-width: 800px) {
-                #welcome-section {
-                    display: flex;
-                    flex-direction: row;
-                }
-            }
-
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The portfolio of Patrick Warner">
+        <meta name="author" content="https://pnwarner.github.io/">
+        <meta property="og:title" content="Patrick Warner">
+        <meta property="og:type" content="website webapp">
+        <meta property="og:url" content="http://paradoxresearch.net/">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="16x16" href="media/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="24x24" href="media/favicon/favicon-24x24.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="32x32" href="media/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="48x48" href="media/favicon/favicon-48x48.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="64x64" href="media/favicon/favicon-64x64.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="96x96" href="media/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="180x180" href="media/favicon/favicon-180x180.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="192x192" href="media/favicon/favicon-192x192.png">
+        <link rel="icon" type="image/png" rel="noopener" target="_blank" sizes="196x196" href="media/favicon/favicon-196x196.png">
+        <link rel="apple-touch-icon" rel="noopener" target="_blank" sizes="180x180" href="media/favicon/favicon-180x180.png">
+        <link rel="apple-touch-icon" rel="noopener" target="_blank" sizes="196x196" href="media/favicon/favicon-196x196.png">
+        <link rel="stylesheet" href="style/style.css?v=1.0">
     </head>
     <body>
         <header>
-            <nav id="navbar">
-                <a id="profile-link" href="https://github.com/pnwarner/" target="_blank"><p>@pnwarner</p></a>
-                <section id="nav-links">
-                    <a href="#about">About Me</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#footer">Contact</a>
-                </section>
-            </nav>
-            <div class="banner">
-                <section id="welcome-section">
-                    <div class="headshot">
-                        <img class="img-headshot" src="headshot.png" alt="Photo of Patrick Warner" />
-                    </div>
-                    <div class="banner-text">
-                        <h1>Patrick Warner</h1>
-                        <p>@pnwarner</p>
-                    </div>
-                </section>
-            </div>
+	        <nav>
+		        <div id="nav_bar" class="nav-bar"><!-- height 60px-->
+			        <div class="nav-logo-title-bar">
+				        <div class="space-left">
+					        <img src="media/favicon/favicon-48x48.png">
+				        </div>
+				        <div class="space-left">
+					        <p class="nav-logo-title-bar-text">pnwarner.github.io</p>
+				        </div>
+			        </div>
+			        <div class="nav-bar-links">
+				        <a class="nav-bar-link" href="http://paradoxresearch.net">
+					        <p>Home</p>
+				        </a>
+			        </div>
+		        </div>
+	        </nav>
         </header>
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-            <h3 class="about-title">Software Developer with 30+ Years of Experience</h3>
-            <p class="about-paragraph">
-                I am a software developer with over 30 years of experience in front-end and back-end development, server administration, and graphic design. I am proficient in a variety of programming languages, including HTML, CSS, JavaScript, PHP, and Python.
-            </p>
-            <h3 class="about-title">Skills</h3>
-            <ul class="item-list">
-                <li>Front-end development: HTML, CSS, JavaScript</li>
-                <li>Back-end development: PHP, Python</li>
-                <li>Server administration: Debian based GNU/Linux distributions</li>
-                <li>Graphic design</li>
-                <li>Learning new technologies quickly</li>
-            </ul>
-            <h3 class="about-title">Experience</h3>
-            <ul class="item-list">
-                <li>Built and maintained my own servers, acting as roles such as administrator, designer, and developer.</li>
-                <li>Deployed servers on both bare-metal and virtual environments. </li>
-                <li>Developed a small content management system (CMS) written primarily in PHP for hosting multiple websites from different domains. </li>
-            </ul>
-            
-                <div class="about-lists">
-                    <div class="about-lists-list">
-                        <h3>Languages</h3>
-                        <hr />
-                        <ul>
-                            <li>HTML / CSS</li>
-                            <li>Javascript</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>C / C++</li>
-                        </ul>
+        <div class="content-scroll-wrapper"> 
+            <main>
+		        <section class="banner">
+			        <div class="banner_container dark_boxes_logo">
+				        <div class="dark_boxes_main" id="dark_boxes"></div>
+			        </div>
+			        <div class="banner-logo">
+				        <img src="media/headshot.png">
+				        <h1>Patrick Warner</h1>
+			        </div>
+		        </section>
+		        <section class="main-content-wrapper">
+                    <!---
+                    <div id="landing-content">
+                        <section id="introduction">
+                            <h1 id="content-page-title" class="center-text">ParadoxResearch.net</h1>
+                            <h2 id="content-page-subtitle" class="center-text">A demonstration of crmbl CMS.</h2>
+                            <section class="intro-paragraph">
+                                <p><span class="indent-text">T</span>his site was made to showcase the development and testing process of <span class="intro-italic-text">crmbl CMS</span>, a software application for hosting websites and api's. <span class="intro-italic-text">CRMBL</span> (<span class="intro-italic-text">pronounced crumble</span>) is an acronym for the applications ability to: <span class="acronym-text">C</span><span class="intro-italic-text">reate</span>, <span class="acronym-text">R</span><span class="intro-italic-text">emove</span>, <span class="acronym-text">M</span><span class="intro-italic-text">odify</span>, or <span class="acronym-text">B</span><span class="intro-italic-text">ackup</span> <span class="acronym-text">L</span><span class="intro-italic-text">ayered</span> directory stuctures that make up a working instance. This instance currently runs 9 domains (including this one) which are load-balanced across 4 servers.  <span style="font-weight: bold;">This is developed as an educational project, and hosted from home servers dedicated strictly to this project.</span> Further explanation, and documentation can be found at this projects <a href="https://github.com/pnwarner/crmbl">GitHub Repository</a>.</p>
+                                <p style="margin-top: 0.5em;"><span class="indent-text">Y</span>ou can <a href="http://paradoxresearch.net/">reload</a> the page to see which server has handled your http request.</p>
+                            </section>
+                        </section>
+                        <div id="project-card" class="project-card">
+                            <figure id="server-demo-container" class="server-demo-container">
+                                <section class="server-demo-image-container">
+                                    <img id="server-demo-image" src="include/media/site/paradoxresearchnet/serve-from/serve-from-pi-3-small.png">
+                                </section>
+                                <section id="server-demo-info" class="server-demo-info">
+                                    <div class="server-demo-info-card server-inactive">
+                                        <div class="server-svg-image server-demo-info-card-icon"></div>
+                                        <p>Server 4</p>
+                                    </div>
+                                    <div class="server-demo-info-card server-inactive">
+                                        <div class="server-svg-image server-demo-info-card-icon"></div>
+                                        <p>Server 3</p>
+                                    </div>
+                                    <div class="server-demo-info-card server-active">
+                                        <div class="server-svg-image server-demo-info-card-icon"></div>
+                                        <p>Server 2</p>
+                                    </div>
+                                    <div class="server-demo-info-card server-inactive">
+                                        <div class="server-svg-image server-demo-info-card-icon"></div>
+                                        <p>Server 1</p>
+                                    </div>
+                                    <div class="server-demo-info-card">
+                                        <div class="server-svg-image server-demo-info-card-icon"></div>
+                                        <p>Load Balancer</p>
+                                    </div>
+                                </section>
+                            </figure>
+                            <section id="demo-sites" class="demo-sites">
+                                <h3 id="server-demo-sites-title">Domains:</h3>
+                                <p style="font-size: 0.75em;">( Managed by this instance )</p>
+                                <ul id="server-demo-sites">
+                                    <li id="server-demo-site-1">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-1-name"><a id="server-demo-site-1-link" href="http://generationok.net/">generationok.net</a></p>
+                                    </li>
+                                    <li id="server-demo-site-2">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-2-name"><a id="server-demo-site-2-link" href="http://genok.net/">genok.net</a></p>
+                                    </li>
+                                    <li id="server-demo-site-3">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-3-name"><a id="server-demo-site-3-link" href="http://odd-one.com/">odd-one.com</a></p>
+                                    </li>
+                                    <li id="server-demo-site-4">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-4-name"><a id="server-demo-site-4-link" href="http://odd-one.net/">odd-one.net</a></p>
+                                    </li>
+                                    <li id="server-demo-site-5">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-5-name"><a id="server-demo-site-5-link" href="http://paradoxaudio.net/">paradoxaudio.net</a></p>
+                                    </li>
+                                    <li id="server-demo-site-6">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-6-name"><a id="server-demo-site-6-link" href="http://paradoxeye.net/">paradoxeye.net</a></p>
+                                    </li>
+                                    <li id="server-demo-site-7">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-7-name"><a id="server-demo-site-7-link" href="http://prdox.net/">prdox.net</a></p>
+                                    </li>
+                                    <li id="server-demo-site-8">
+                                        <div class="server-demo-site-icon globe-svg-image"></div>
+                                        <p id="server-demo-site-8-name"><a id="server-demo-site-8-link" href="http://pupperwash.com">pupperwash.com</a></p>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
                     </div>
-                    <div class="about-lists-list">
-                        <h3>Environments</h3>
-                        <hr />
-                        <ul>    
-                            <li>Apache HTTP Server</li>
-                            <li>Git version control</li>
-                            <li>BASH Shell / Scripting</li>
-                            <li>Linux administration tool stack</li>
-                        </ul>
-                    </div>
-                    <div class="about-lists-list">
-                        <h3>Software</h3>
-                        <hr />
-                        <ul>
-                            <li>vim</li>
-                            <li>Visual Studio Code</li>
-                            <li>GIMP</li>
-                            <li>Photoshop / Illustrator</li>
-                        </ul>
-                    </div>
-                    <div class="about-lists-list">
-                        <ul></ul>
-                    </div>
-                </div>
-            </section>
-            <section class="project-tile" id="projects">
-                <h2 class="project-tile">Projects</h2>
-                <ul class="item-list">
-                    <li>
-                        <a class="project-title" href="https://github.com/pnwarner/crmbl">CRMBL CMS</a>
-                        <p>
-                            A small CMS for hosting multiple websites with dynamic content
-                        </p>
-                    </li>
-                    <li>
-                        <a class="project-title" href="">PBN Bot</a>
-                        <p>
-                            A demonstration bot written with Python and Selenium to stay persistantly logged in, and collect information from the browser based game <a href="https://www.paintballnet.net">Paintball-Net</a>
-                        </p>
-                    </li>
-                    <li>
-                        <a class="project-title" href="http://www.paradoxresearch.net/">Paradoxresearch.net</a>
-                        <p>
-                            A demonstration of CRMBL CMS and the multiple domains it servers from a home-based Cluster Computer Server.
-                        </p>
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <footer id="footer">
-            <ul>
-                <li>
-                    <p id="contact-name">Patrick Warner</p>
-                </li>
-                <li>
-                    <p id="contact-location">Las Vegas, Nv</p>
-                </li>
-                <li>
-                    <a href="mailto:patrick.warner@paradoxresearch.net"><p id="contact-email">patrick.warner@paradoxresearch.net</p></a>
-                </li>
-            </ul>
-            <section id="links">           
-                <a href="https://www.github.com/pnwarner">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 512 512" id="IconChangeColor"><title>ionicons-v5_logos</title><path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z" id="mainIconPathAttribute" fill="#ffffff"></path></svg>
-                </a>
-                <a href="https://www.fosstodon.org/prdoxi">
-                    <svg style="color: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480,173.59c0-104.13-68.26-134.65-68.26-134.65C377.3,23.15,318.2,16.5,256.8,16h-1.51c-61.4.5-120.46,7.15-154.88,22.94,0,0-68.27,30.52-68.27,134.65,0,23.85-.46,52.35.29,82.59C34.91,358,51.11,458.37,145.32,483.29c43.43,11.49,80.73,13.89,110.76,12.24,54.47-3,85-19.42,85-19.42l-1.79-39.5s-38.93,12.27-82.64,10.77c-43.31-1.48-89-4.67-96-57.81a108.44,108.44,0,0,1-1-14.9,558.91,558.91,0,0,0,96.39,12.85c32.95,1.51,63.84-1.93,95.22-5.67,60.18-7.18,112.58-44.24,119.16-78.09C480.84,250.42,480,173.59,480,173.59ZM399.46,307.75h-50V185.38c0-25.8-10.86-38.89-32.58-38.89-24,0-36.06,15.53-36.06,46.24v67H231.16v-67c0-30.71-12-46.24-36.06-46.24-21.72,0-32.58,13.09-32.58,38.89V307.75h-50V181.67q0-38.65,19.75-61.39c13.6-15.15,31.4-22.92,53.51-22.92,25.58,0,44.95,9.82,57.75,29.48L256,147.69l12.45-20.85c12.81-19.66,32.17-29.48,57.75-29.48,22.11,0,39.91,7.77,53.51,22.92Q399.5,143,399.46,181.67Z" fill="white"></path></svg>
-                </a>
-                <a href="mailto:patrick.warner@paradoxresearch.net">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" fill="white"/></svg>
-                </a>
-                <a href="http://www.paradoxresearch.net">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z" fill="white"/></svg>
-                </a>
-            </section>
-        </footer>
-        <script type="text/javascript">
+                -->
 
-        </script>
+                    <!-- Begin Portfolio page Content -->
+                    <section id="about">
+                        <div class="intro-paragraph">
+                            <h3 class="about-title">Software Developer with 30+ Years of Experience</h3>
+                            <p class="about-paragraph">
+                                <span class="indent-text">I</span> am a software developer with over 30 years of experience in front-end and back-end development, server administration, and graphic design. I am proficient in a variety of programming languages, including HTML, CSS, JavaScript, PHP, and Python.
+                            </p>
+                        </div>
+                        <div class="project-card">
+                            <div class="portfolio-card"> <!--Change this-->
+                                <h3 class="about-title">Skills</h3>
+                                <ul class="item-list">
+                                    <li>Front-end development: HTML, CSS, JavaScript</li>
+                                    <li>Back-end development: PHP, Python</li>
+                                    <li>Server administration: Debian based GNU/Linux distributions</li>
+                                    <li>Graphic design</li>
+                                    <li>Problem solving</li>
+                                    <li>Learning new technologies quickly</li>
+                                </ul>
+                                <h3 class="about-title">Experience</h3>
+                                <ul class="item-list">
+                                    <li>Built and maintained my own servers, acting as roles such as administrator, designer, and developer.</li>
+                                    <li>Deployed servers on both bare-metal and virtual environments. </li>
+                                    <li>Developed a small content management system (CMS) written primarily in PHP for hosting multiple websites from different domains. </li>
+                                </ul>
+                                </div>
+                            </div>
+                        <div class="project-card">
+                            <div class="portfolio-card"> <!--Change this-->
+                                <div class="about-lists">
+                                    <div class="about-lists-list">
+                                        <h3>Languages</h3>
+                                        <hr />
+                                        <ul>
+                                            <li>HTML / CSS</li>
+                                            <li>Javascript</li>
+                                            <li>Python</li>
+                                            <li>PHP</li>
+                                            <li>C / C++</li>
+                                        </ul>
+                                    </div>
+                                    <div class="about-lists-list">
+                                        <h3>Environments</h3>
+                                        <hr />
+                                        <ul>    
+                                            <li>Apache HTTP Server</li>
+                                            <li>Git version control</li>
+                                            <li>BASH Shell / Scripting</li>
+                                            <li>Linux administration tool stack</li>
+                                        </ul>
+                                    </div>
+                                    <div class="about-lists-list">
+                                        <h3>Software</h3>
+                                        <hr />
+                                        <ul>
+                                            <li>vim</li>
+                                            <li>Visual Studio Code</li>
+                                            <li>GIMP</li>
+                                            <li>Photoshop / Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <!--<div class="about-lists-list">
+                                        <ul></ul>
+                                    </div> -->         
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                        <div class="project-card">
+                            <div class="portfolio-card"> <!--Change this-->
+                                <section class="project-tile" id="projects">
+                                    <h2 class="project-tile">Projects</h2>
+                                    <ul class="item-list">
+                                        <li>
+                                            <a class="project-title" href="https://github.com/pnwarner/crmbl">CRMBL CMS</a>
+                                            <p>
+                                                A small CMS for hosting multiple websites with dynamic content
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="project-title" href="">PBN Bot</a>
+                                            <p>
+                                                A demonstration bot written with Python and Selenium to stay persistantly logged in, and collect information from the browser based game <a href="https://www.paintballnet.net">Paintball-Net</a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="project-title" href="http://www.paradoxresearch.net/">Paradoxresearch.net</a>
+                                            <p>
+                                                A demonstration of CRMBL CMS and the multiple domains it servers from a home-based Cluster Computer Server.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    <!-- End Portfolio Page Content-->
+                </section>
+            </main>
+            <footer>
+		        <div class="footer-item-container">
+			        <div id="footer-items" class="footer-items">
+				        <div id="footer-info" class="footer-info">
+					        <ul>
+						        <li><h3><span id="footer-company-name">@pnwarner</span></h3></li>
+						        <li>
+							        <div id="powered-by-display" class="powered-by-display">
+								        <p>Powered By:</p>
+								        <a id="footer-address-site-link" href="http://paradoxresearch.net" title="Check out crmbl CMS"><span id="footer-address-site-title">paradoxresearch</span></a>
+							        </div>
+						        </li>
+					        </ul>
+				        </div>
+				        <div id="footer-icon-links" class="footer-icon-links">
+					        <a id="footer-link-github" href="https://github.com/pnwarner" title="Visit my github page"><div id="footer-icon-github" class="footer-icon github-svg-image"></div></a>
+					        <a id="footer-link-mastodon" rel="me" href="https://fosstodon.org/@prdoxi" title="Find me on Mastodon"><div id="footer-icon-mastodon" class="footer-icon mastodon-svg-image"></div></a>
+					        <a id="footer-link-personalsite" href="http://paradoxresearch.net" title="Portfolio page of Patrick Warner"><div id="footer-icon-globe" class="footer-icon globe-svg-image"></div></a>
+					        <a id="footer-link-email" href="mailto:info@paradoxresearch.net" title="Contact the site owner"><div id="footer-icon-envelope" class="footer-icon envelope-svg-image"></div></a>
+				        </div>
+			        </div>
+		        </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="script/main.js"></script>
     </body>
 </html>
