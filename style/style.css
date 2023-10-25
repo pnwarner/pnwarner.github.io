@@ -131,13 +131,14 @@ body .content-scroll-wrapper .banner .banner_container .dark_boxes_main {
 
 body .content-scroll-wrapper .banner .banner-logo {
 	display: flex;
-	flex-flow: row;
+	flex-flow: column;
 	align-items: center; 
+	justify-content: left;
 	position: absolute;
 	width: 100%;
-	padding-left: 4em;
+	/*padding-left: 4em;*/
 	/*padding-right: 3em;*/
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 }
 
 body .content-scroll-wrapper .banner .banner-logo img {
@@ -149,8 +150,10 @@ body .content-scroll-wrapper .banner .banner-logo img {
 }
 
 body .content-scroll-wrapper .banner .banner-logo h1 {
+	/*
 	margin-top: auto;
 	margin-right: auto;
+	*/
 	color: #777777;
 }
 
@@ -187,7 +190,7 @@ body .content-scroll-wrapper main .main-content-wrapper {
 	color: var(--gold-yellow);
 	border-radius: 10px;
 	padding: 2em;
-	font-size: 0.9em;
+	/*font-size: 0.9em;*/
 }
 
 .intro-paragraph a {
@@ -348,6 +351,10 @@ body .content-scroll-wrapper main .main-content-wrapper .project-card .demo-site
     width: 100%;
 }
 
+.portfolio-card h3:last-of-type {
+	margin-top: 1em;
+}
+
 .about-title {
     color: white;
 }
@@ -360,8 +367,8 @@ body .content-scroll-wrapper main .main-content-wrapper .project-card .demo-site
     display: flex;
     align-content: center;
     justify-content: space-around;
-    margin-top: 2em;
-	margin-bottom: 2em;
+    /*margin-top: 2em;*/
+	/*margin-bottom: 2em;*/
     flex-wrap: wrap;
 }
 
@@ -396,6 +403,20 @@ hr {
 
 .about-lists-list li:last-of-type {
 	margin-bottom: 1em;
+}
+
+.about-lists-list ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+.about-lists-list ul li a:hover {
+	color: var(--gold-yellow);
+}
+
+.about-lists-list ul li a:active {
+	color: white;
 }
 
 
@@ -762,6 +783,10 @@ body .content-scroll-wrapper footer .footer-item-container .footer-items .footer
 }
 
 @media (max-width: 625px) {
+	body .content-scroll-wrapper .banner .banner-logo {
+		padding-left: 0;
+	}
+
 	body .content-scroll-wrapper .banner .banner-logo img {
 		height: 150px;
 		width: auto;
