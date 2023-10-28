@@ -155,6 +155,7 @@ body .content-scroll-wrapper .banner .banner-logo h1 {
 	margin-right: auto;
 	*/
 	color: #777777;
+	text-align: center;
 }
 
 /* BODY - SCROLLABLE - MAIN AREA */
@@ -375,6 +376,7 @@ body .content-scroll-wrapper main .main-content-wrapper .project-card .demo-site
 .about-lists h3 {
     text-align: center;
 	color: white;
+	margin-bottom: 1em;
 }
 
 
@@ -396,13 +398,17 @@ hr {
 }
 
 .about-lists-list {
-    margin: 0 1em 0 1em;
+    /*margin: 0 1em 0 1em;*/
 	min-width: 25%;
 }
 
 
 .about-lists-list li:last-of-type {
 	margin-bottom: 1em;
+}
+
+.about-lists-list ul li {
+	list-style: none;
 }
 
 .about-lists-list ul li a {
@@ -809,7 +815,7 @@ body .content-scroll-wrapper footer .footer-item-container .footer-items .footer
 	}
 
 	.about-lists-list {
-		margin: 0 2em 0 2em;
+		margin: 0 1em 0 1em;
 		width: 100%;
 	}
 
