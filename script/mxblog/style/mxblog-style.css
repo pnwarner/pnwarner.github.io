@@ -1,0 +1,113 @@
+/*General Styles*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: silver;
+    font-family: Helvetica;
+}
+
+.child-block {
+    margin: 1em;
+    background-color: ivory;
+    padding: 0.5em;
+}
+
+.options-box {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.option-item {
+    background-color: grey;
+    color: white;
+    margin: 0.25em;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+main {
+    margin: 2em auto;
+    background-color: ivory;
+    padding: 2em;
+    margin: 1em;
+}
+
+.main-details {
+    margin: 1em;
+}
+
+/*Article Reader Styles*/
+
+h1 {
+    font-size: 1.8em;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+blockquote {
+    margin: 0.5em 1em;
+    background-color:khaki;
+    font-style: italic;
+    font-weight: 200;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    margin: auto auto;
+}
+
+.article-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.article-paragraph {
+    max-width: 90%;
+    margin: 1em 2em;
+}
+
+#article-sources, #article-links li {
+    list-style: none;
+    margin-top: 0.5em 1em;
+}
+
+.item-label {
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.article-nav-prev-next-wrapper {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.article-nav-prev-next-item {
+    width: 150px;
+}
+
+.article-nav-articles-info {
+    width: 100%;
+    text-align: center;
+}
+
+.article-nav-selection {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
