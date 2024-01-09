@@ -542,8 +542,8 @@ hr {
 
 .background-corner-logo {
 	background-image: url('https://pnwarner.github.io/media/ident_medium-grey.svg');
-	background-position: bottom right;
-	background-size: 300px auto;
+	background-position: bottom 1em right 1em;
+	background-size: 33%;
 	background-repeat: no-repeat;
 }
 
