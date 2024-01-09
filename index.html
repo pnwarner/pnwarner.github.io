@@ -23,6 +23,8 @@
         <link rel="apple-touch-icon" rel="noopener" target="_blank" sizes="180x180" href="media/favicon/favicon-180x180.png">
         <link rel="apple-touch-icon" rel="noopener" target="_blank" sizes="196x196" href="media/favicon/favicon-196x196.png">
         <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/animate-svg.css">
+        <link rel="stylesheet" href="style/mod-svg.css">
     </head>
     <body>
         <header>
@@ -61,13 +63,13 @@
 				        <div class="dark_boxes_main" id="dark_boxes"></div>
 			        </div>
 			        <div class="banner-logo">
-				        <img src="media/headshot.png" alt="A photograph of Patrick W.">
-                        <!--
-                        <div class="logo-animation-frame">
-                            <img id="logo-frame-1" class="filter-white">
-                            <img id="logo-frame-2" class="filter-white">
+                        <div class="banner-images">
+				            <img src="media/headshot.png" alt="A photograph of Patrick W." style="opacity: 0.5;">
+                            <div class="logo-animation-frame" style="opacity: 0.2;">
+                                <img id="logo-frame-1" class="filter-white">
+                                <img id="logo-frame-2" class="filter-white">
+                            </div>
                         </div>
-                        -->
                         <h1>Patrick Warner</h1>
 			        </div>
 		        </section>
@@ -238,5 +240,7 @@
             </footer>
         </div>
         <script type="text/javascript" src="script/main.js"></script>
+        <script type="text/javascript" src="script/animate-svg/animate-svg.js"></script>
+        <script type="text/javascript" src="script/animate-svg/logo-transition.js"></script>
     </body>
 </html>

@@ -157,6 +157,12 @@ body .content-scroll-wrapper .banner .banner-logo img {
 	border: 4px solid #777777;
 	border-radius: 50%;
 	overflow: hidden;
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.banner-images {
+	display: grid;
 }
 
 body .content-scroll-wrapper .banner .banner-logo h1 {

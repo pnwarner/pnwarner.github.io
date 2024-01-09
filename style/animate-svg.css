@@ -1,13 +1,15 @@
-.animation-frame {
+.logo-animation-frame {
     display: grid;
     max-width: max-content;
-    padding: 1em;
-    background-color: grey;
+    /*padding: 1em;*/
+    background-color: none;
     border-radius: 10px;
-    margin: 2em auto;
+    /*margin: 2em auto;*/
+    grid-row: 1;
+    grid-column: 1;
 }
 
-.animation-frame img {
+.logo-animation-frame img {
     width: 96px;
     height: 96px;
     grid-row: 1;
