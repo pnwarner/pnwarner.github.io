@@ -531,6 +531,10 @@ hr {
 	color: white;
 }
 
+.less-bold {
+	font-weight: 500;
+}
+
 .background-img-decoration {
 	background-image: url('https://pnwarner.github.io/media/header_banner01_short-white.png');
 	/*
