@@ -182,11 +182,12 @@ body .content-scroll-wrapper main .main-content-wrapper {
 	padding: 1em 2em 1em 2em;
 	/*min-height: fit-content;*/
 	min-height: calc(100vh - (var(--nav-bar-height) + var(--banner-height) + var(--footer-height)));
-	background-image: url('https://pnwarner.github.io/media/ident_medium-light.svg');
+	/*background-image: url('https://pnwarner.github.io/media/ident_medium-light.svg');*/
 	background-position: center;
 	background-size: cover;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-image: linear-gradient(to bottom, #808080, #979797, #aeaeae, #c6c6c6, #dedede, #d2d2d2, #c5c5c5, #b9b9b9, #878787, #585858, #2e2e2e, #000000);
 }
 
 /* BODY - SCROLLABLE - MAIN AREA - SITE CONTENT STYLES */
