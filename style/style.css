@@ -523,9 +523,9 @@ hr {
 	font-size: 0.85em;
 	font-weight: bold;
 	color: white;
-	border-radius: 5px;
+	border-radius: 10px;
 	background-color: #5A5A5A;
-	padding: 5px;
+	padding: 3px;
 }
 
 .resume-link:hover {
