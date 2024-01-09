@@ -359,13 +359,7 @@ body .content-scroll-wrapper main .main-content-wrapper .project-card .demo-site
 /* Portfolio Page Styles */
 .portfolio-card {
 	background-color: #5A5A5A;
-	/*
-	background-image: url('https://pnwarner.github.io/media/ident_medium-light.svg');
-	background-position: center;
-	background-size: cover;
-	background-size: contain;
-	background-repeat: no-repeat;
-	*/
+	
 	/*
 	background-image: url('https://pnwarner.github.io/media/header_banner01_short-white.png');
 	background-position: center;
@@ -544,6 +538,13 @@ hr {
 	background-size: contain;
 	*/
 	background-repeat: repeat;
+}
+
+.background-corner-logo {
+	background-image: url('https://pnwarner.github.io/media/ident_medium-grey.svg');
+	background-position: bottom right;
+	background-size: 300px auto;
+	background-repeat: no-repeat;
 }
 
 .top-left-border {
