@@ -1,3 +1,13 @@
+@keyframes rotating {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
 .logo-animation-frame {
     display: grid;
     max-width: max-content;
@@ -7,6 +17,7 @@
     /*margin: 2em auto;*/
     grid-row: 1;
     grid-column: 1;
+    animation: rotating 60s linear infinite;
 }
 
 .logo-animation-frame img {
