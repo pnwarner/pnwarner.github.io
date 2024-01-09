@@ -372,6 +372,7 @@ body .content-scroll-wrapper main .main-content-wrapper .project-card .demo-site
 	background-size: contain;
 	background-repeat: no-repeat;
 	*/
+	
 	color: var(--gold-yellow);
 	padding: 2em;
 	border-radius: 10px;
@@ -538,9 +539,16 @@ hr {
 
 .background-img-decoration {
 	background-image: url('https://pnwarner.github.io/media/header_banner01_short-white.png');
+	/*
 	background-position: center;
 	background-size: contain;
-	background-repeat: no-repeat;
+	*/
+	background-repeat: repeat;
+}
+
+.top-left-border {
+	border-top: 2px solid rgba(255,255,255,0.4);
+	border-left: 2px solid rgba(255,255,255,0.4);
 }
 
 /* BODY - SCROLLABLE - FOOTER */
