@@ -1,12 +1,12 @@
 const app_script_list = [
-    'https://pnwarner.github.io/script/mxblog/article_class.js',
-    'https://pnwarner.github.io/script/mxblog/blog_class.js',
-    'https://pnwarner.github.io/script/mxblog/xblog_class.js',
-    'https://pnwarner.github.io/script/mxblog/article_reader.js',
-    'https://pnwarner.github.io/script/mxblog/article_editor.js',
-    'https://pnwarner.github.io/script/mxblog/article_reader_display_object.js',
-    'https://pnwarner.github.io/script/mxblog/article_editor_display_object.js',
-    'https://pnwarner.github.io/script/mxblog/start_app.js'
+    'https://pnwarner.github.io/script/mxblog/js/article_class.js',
+    'https://pnwarner.github.io/script/mxblog/js/blog_class.js',
+    'https://pnwarner.github.io/script/mxblog/js/xblog_class.js',
+    'https://pnwarner.github.io/script/mxblog/js/article_reader.js',
+    'https://pnwarner.github.io/script/mxblog/js/article_editor.js',
+    'https://pnwarner.github.io/script/mxblog/js/article_reader_display_object.js',
+    'https://pnwarner.github.io/script/mxblog/js/article_editor_display_object.js',
+    'https://pnwarner.github.io/script/mxblog/js/start_app.js'
 ];
 
 function add_script_element(script_addr){
