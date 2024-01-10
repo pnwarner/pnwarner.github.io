@@ -527,18 +527,18 @@ hr {
 }
 
 .resume-link-p {
-	text-align: right;
+	text-align: center;
 	margin-top: 0.5em;
 }
 
 .resume-link {
 	text-decoration: none;
-	font-size: 0.85em;
+	font-size: 0.9em;
 	font-weight: bold;
 	color: white;
 	border-radius: 10px;
 	background-color: #5A5A5A;
-	padding: 3px;
+	padding: 5px;
 }
 
 .resume-link:hover {
