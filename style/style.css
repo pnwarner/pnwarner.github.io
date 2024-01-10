@@ -920,6 +920,11 @@ body .content-scroll-wrapper footer .footer-item-container .footer-items .footer
 		width: auto;
 	}
 
+	.banner-svg-img {
+		height: 150px;
+		width: auto;
+	}
+
 	body .content-scroll-wrapper main .main-content-wrapper .project-card .server-demo-container {
 		flex-flow: column;
 	}
