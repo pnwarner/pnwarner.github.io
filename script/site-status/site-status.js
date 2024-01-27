@@ -60,7 +60,7 @@ async function time_site_response(Server_Item) {
         if (response != false) {
             let end_time = new Date().getTime() - start_time;
             /* Process Response String here, and assign Server_Item.status after */
-            Server_Item.status = response;
+            Server_Item.status = json.parse(response).status;
             Server_Item.req_time = end_time;
             return true
         } else {
@@ -83,12 +83,13 @@ async function check_site(Server_Item) {
 
 function check_servers() {
     check_site(site1);
-    check_site(site2);
-    check_site(site3);
-    check_site(site4);
+    //check_site(site2);
+    //check_site(site3);
+    //check_site(site4);
 }
 
-const site1 = new Server_Item('http://s1.paradoxresearch.net:81/', '?status', 'Server 1', 'server-1-text', 'server-1-wrapper');
+//const site1 = new Server_Item('http://s1.paradoxresearch.net:81/', '?status', 'Server 1', 'server-1-text', 'server-1-wrapper');
+const site1 = new Server_Item('http://s1.paradoxresearch.net:81/', 'include/media/site/paradoxresearchnet-s1/status.txt', 'Server 1', 'server-1-text', 'server-1-wrapper');
 const site2 = new Server_Item('http://s2.paradoxresearch.net:81/', '?status', 'Server 2', 'server-2-text', 'server-2-wrapper');
 const site3 = new Server_Item('http://s3.paradoxresearch.net:81/', '?status', 'Server 3', 'server-3-text', 'server-3-wrapper');
 const site4 = new Server_Item('http://s4.paradoxresearch.net:81/', '?status', 'Server 4', 'server-4-text', 'server-4-wrapper');
@@ -99,3 +100,25 @@ function repeat_check(){
 }
 
 repeat_check();
+
+/*
+<section id="server-demo-info" class="server-demo-info">
+    <p class="large-bold-white">Project server status:</p>
+    <div id="server-4-wrapper" class="server-demo-info-card">
+        <div class="server-svg-image server-demo-info-card-icon"></div>
+        <p id="server-4-text">Server 4</p>
+    </div>
+    <div id="server-3-wrapper" class="server-demo-info-card">
+        <div class="server-svg-image server-demo-info-card-icon"></div>
+        <p id="server-3-text">Server 3</p>
+    </div>
+    <div id="server-2-wrapper" class="server-demo-info-card">
+        <div class="server-svg-image server-demo-info-card-icon"></div>
+        <p id="server-2-text">Server 2</p>
+    </div>
+    <div id="server-1-wrapper" class="server-demo-info-card">
+        <div class="server-svg-image server-demo-info-card-icon"></div>
+        <p id="server-1-text">Server 1</p>
+    </div>
+</section>
+*/
