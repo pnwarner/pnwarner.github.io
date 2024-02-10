@@ -126,10 +126,12 @@ body .content-scroll-wrapper .banner .banner_container {
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
-	min-height: 270px;
-	min-width: 95%;
-	border: 3px transparent black;
-	border-radius: 20px;
+	/*min-height: 270px;*/
+	min-height: 300px;
+	width: 100%;
+	/*min-width: 95%;*/
+	/*border: 3px transparent black;*/
+	/*border-radius: 20px;*/
 	overflow: hidden;
 }
 
