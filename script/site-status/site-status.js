@@ -83,16 +83,15 @@ async function check_site(Server_Item) {
 
 function check_servers() {
     check_site(site1);
-    //check_site(site2);
-    //check_site(site3);
-    //check_site(site4);
+    check_site(site2);
+    check_site(site3);
+    check_site(site4);
 }
 
-//const site1 = new Server_Item('http://s1.paradoxresearch.net:81/', '?status', 'Server 1', 'server-1-text', 'server-1-wrapper');
-const site1 = new Server_Item('http://s1.paradoxresearch.net:81/', 'include/media/site/paradoxresearchnet-s1/status.txt', 'Server 1', 'server-1-text', 'server-1-wrapper');
-const site2 = new Server_Item('http://s2.paradoxresearch.net:81/', '?status', 'Server 2', 'server-2-text', 'server-2-wrapper');
-const site3 = new Server_Item('http://s3.paradoxresearch.net:81/', '?status', 'Server 3', 'server-3-text', 'server-3-wrapper');
-const site4 = new Server_Item('http://s4.paradoxresearch.net:81/', '?status', 'Server 4', 'server-4-text', 'server-4-wrapper');
+const site1 = new Server_Item('https://s1.paradoxresearch.net/', '?status', 'Server 1', 'server-1-text', 'server-1-wrapper');
+const site2 = new Server_Item('https://s2.paradoxresearch.net/', '?status', 'Server 2', 'server-2-text', 'server-2-wrapper');
+const site3 = new Server_Item('https://s3.paradoxresearch.net/', '?status', 'Server 3', 'server-3-text', 'server-3-wrapper');
+const site4 = new Server_Item('https://s4.paradoxresearch.net/', '?status', 'Server 4', 'server-4-text', 'server-4-wrapper');
 
 function repeat_check(){
     check_servers();
