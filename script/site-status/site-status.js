@@ -13,7 +13,7 @@ class Server_Item  {
         let textbox = document.getElementById(this.text_element);
         textbox.innerHTML = '';
         if (this.status != this.server_name + " Timed out. [DOWN]"){
-            textbox.innerHTML = '<a href="' + this.url + '"><span class="server-link">' + this.server_name + ' (</span> <span class="large-bold-white">' + this.req_time + '</span><span class="server-link">ms )</span> [UP]</a>';
+            textbox.innerHTML = '<a class="server-link-a" href="' + this.url + '"><span class="server-link">' + this.server_name + ' (</span> <span class="large-bold-white">' + this.req_time + '</span><span class="server-link">ms ) [UP]</span></a>';
         } else {
             textbox.innerHTML = this.status;
         }
@@ -27,8 +27,10 @@ async function make_request(method, Server_Item){
         xhr.open(method, Server_Item.url + Server_Item.request);
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
+                //console.log(xhr.response);
                 resolve(xhr.response);
             } else {
+                //console.log('Error here.');
                 reject(new Error({
                     status: this.status,
                     statusText: xhr.statusText
@@ -36,12 +38,14 @@ async function make_request(method, Server_Item){
             }
         };
         xhr.onerror = function () {
+            //console.log('Error here');
             reject(new Error({
                 status: this.status,
                 statusText: xhr.statusText
             }));
         };
         xhr.ontimeout = (e) => {
+            //console.log('Error here');
             reject(new Error({
                 status: this.status,
                 statusText: xhr.statusText
@@ -49,6 +53,7 @@ async function make_request(method, Server_Item){
         };
         xhr.send();
     }).catch(function (error){
+        //console.log(error);
         return false
     });
 }
@@ -60,7 +65,7 @@ async function time_site_response(Server_Item) {
         if (response != false) {
             let end_time = new Date().getTime() - start_time;
             /* Process Response String here, and assign Server_Item.status after */
-            Server_Item.status = json.parse(response).status;
+            Server_Item.status = response.status;
             Server_Item.req_time = end_time;
             return true
         } else {
@@ -88,6 +93,7 @@ function check_servers() {
     check_site(site4);
 }
 
+//const site1 = new Server_Item('http://s1.paradoxresearch.net:81/', '?status', 'Server 1', 'server-1-text', 'server-1-wrapper');
 const site1 = new Server_Item('https://s1.paradoxresearch.net/', '?status', 'Server 1', 'server-1-text', 'server-1-wrapper');
 const site2 = new Server_Item('https://s2.paradoxresearch.net/', '?status', 'Server 2', 'server-2-text', 'server-2-wrapper');
 const site3 = new Server_Item('https://s3.paradoxresearch.net/', '?status', 'Server 3', 'server-3-text', 'server-3-wrapper');
