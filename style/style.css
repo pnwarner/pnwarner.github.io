@@ -710,8 +710,8 @@ footer {
 	}
 
 	.banner-logo img {
-		height: 150px;
-		width: auto;
+		height: 150px !important;
+		width: 150px !important;
 	}
 
 	.banner-svg-img {
