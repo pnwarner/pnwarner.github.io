@@ -29,8 +29,8 @@
     <body>
         <header>
 	        <nav>
-		        <div id="nav_bar" class="nav-bar"><!-- height 60px-->
-			        <div class="nav-logo-title-bar">
+		        <div id="nav_bar" class="nav-bar flex-center"><!-- height 60px-->
+			        <div class="nav-logo-title-bar flex-center">
 				        <div class="space-left">
 					        <img src="media/favicon/favicon-48x48.png">
 				        </div>
@@ -38,7 +38,7 @@
 					        <p class="nav-logo-title-bar-text">pnwarner.github.io</p>
 				        </div>
 			        </div>
-			        <div class="nav-bar-links">
+			        <div class="nav-bar-links flex-center">
                         |
                         <a class="nav-bar-link" href="#banner">
 					        <p>About</p>
@@ -58,19 +58,17 @@
         </header>
         <div class="content-scroll-wrapper"> 
             <main>
-		        <section class="banner" id="banner">
+		        <section class="banner flex-center" id="banner">
 			        <div class="banner_container dark_boxes_logo">
 				        <div class="dark_boxes_main" id="dark_boxes"></div>
 			        </div>
-			        <div class="banner-logo">
+			        <div class="banner-logo flex-center">
                         <div class="banner-images">
-				            <!--<img src="media/headshot.png" alt="A photograph of Patrick W." style="opacity: 0.5;">-->
-                            
                             <div class="logo-animation-frame" style="opacity: 0.3;">
                                 <img id="logo-frame-1" class="filter-white">
                                 <img id="logo-frame-2" class="filter-white">
                             </div>
-                            <div class="user-tie-svg-image banner-svg-img"></div>
+                            <div class="user-tie-svg-image bg-svg banner-svg-img"></div>
                         </div>
                         <h1>Patrick Warner</h1>
 			        </div>
@@ -194,20 +192,20 @@
                                                 A test environment, and demonstration of my CRMBL CMS project and the multiple domains it currently serves. This project is hosted by a cluster of servers from my HomeLab.
                                             </p>
                                             <section id="server-demo-info" class="server-demo-info">
-                                                <div id="server-4-wrapper" class="server-demo-info-card">
-                                                    <div class="server-svg-image server-demo-info-card-icon"></div>
+                                                <div id="server-4-wrapper" class="server-demo-info-card flex-center">
+                                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
                                                     <p id="server-4-text">Server 4</p>
                                                 </div>
-                                                <div id="server-3-wrapper" class="server-demo-info-card">
-                                                    <div class="server-svg-image server-demo-info-card-icon"></div>
+                                                <div id="server-3-wrapper" class="server-demo-info-card flex-center">
+                                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
                                                     <p id="server-3-text">Server 3</p>
                                                 </div>
-                                                <div id="server-2-wrapper" class="server-demo-info-card">
-                                                    <div class="server-svg-image server-demo-info-card-icon"></div>
+                                                <div id="server-2-wrapper" class="server-demo-info-card flex-center">
+                                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
                                                     <p id="server-2-text">Server 2</p>
                                                 </div>
-                                                <div id="server-1-wrapper" class="server-demo-info-card">
-                                                    <div class="server-svg-image server-demo-info-card-icon"></div>
+                                                <div id="server-1-wrapper" class="server-demo-info-card flex-center">
+                                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
                                                     <p id="server-1-text">Server 1</p>
                                                 </div>
                                             </section>
@@ -231,13 +229,13 @@
                 </section>
             </main>
             <footer>
-		        <div class="footer-item-container">
-			        <div id="footer-items" class="footer-items">
+		        <div class="footer-item-container flex-center">
+			        <div id="footer-items" class="footer-items flex-center">
 				        <div id="footer-info" class="footer-info">
 					        <ul>
 						        <li><h3><span id="footer-company-name">@pnwarner</span></h3></li>
 						        <li>
-							        <div id="powered-by-display" class="powered-by-display">
+							        <div id="powered-by-display" class="powered-by-display flex-center">
 								        <p>Powered By:</p>
 								        <a id="footer-address-site-link" href="http://paradoxresearch.net" title="Check out Paradox Research"><span id="footer-address-site-title">curiosity</span></a>
 							        </div>
@@ -247,11 +245,10 @@
                         <div id="contact">
                             <p class="contact-title">Contact</p>
                             <hr>
-                            <div id="footer-icon-links" class="footer-icon-links">
-                                <a id="footer-link-email" href="mailto:patrick.warner@paradoxresearch.net?subject=Contacting you from your github.io page" title="Email Me"><div id="footer-icon-envelope" class="footer-icon envelope-svg-image"></div></a>
-                                <a id="footer-link-mastodon" rel="me" href="https://fosstodon.org/@prdoxi" title="Find me on Mastodon"><div id="footer-icon-mastodon" class="footer-icon mastodon-svg-image"></div></a>
-                                <!--<a id="footer-link-personalsite" href="http://paradoxresearch.net" title="Project HUB of Patrick Warner"><div id="footer-icon-globe" class="footer-icon globe-svg-image"></div></a>-->
-                                <a id="footer-link-github" href="https://github.com/pnwarner" title="Visit my github page"><div id="footer-icon-github" class="footer-icon github-svg-image"></div></a>
+                            <div id="footer-icon-links" class="footer-icon-links flex-center">
+                                <a id="footer-link-email" href="mailto:patrick.warner@paradoxresearch.net?subject=Contacting you from your github.io page" title="Email Me"><div id="footer-icon-envelope" class="footer-icon envelope-svg-image bg-svg"></div></a>
+                                <a id="footer-link-mastodon" rel="me" href="https://fosstodon.org/@prdoxi" title="Find me on Mastodon"><div id="footer-icon-mastodon" class="footer-icon mastodon-svg-image bg-svg"></div></a>
+                                <a id="footer-link-github" href="https://github.com/pnwarner" title="Visit my github page"><div id="footer-icon-github" class="footer-icon github-svg-image bg-svg"></div></a>
                             </div>
                             <hr>
                             <p class="resume-link-p"><a class="resume-link" href="https://pnwarner.github.io/media/resume/Patrick-Warner.pdf">Resume</a></p>
@@ -260,7 +257,7 @@
 		        </div>
             </footer>
         </div>
-        <script type="text/javascript" src="script/main.js"></script>
+        <script type="text/javascript" src="script/darkboxes.js"></script>
         <script type="text/javascript" src="script/animate-svg/animate-svg.js"></script>
         <script type="text/javascript" src="script/animate-svg/logo-transition.js"></script>
         <script type="text/javascript" src="script/site-status/site-status.js"></script>
