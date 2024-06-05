@@ -173,6 +173,10 @@ footer {
     text-indent: 2em;
 }
 
+.indent-paragraph {
+    text-indent: 2em;
+}
+
 .article-paragraph:first-letter {
     font-size: 32px;
     font-weight: bold;
@@ -291,7 +295,7 @@ footer {
 .project-info-container {
     margin: 1em;
     padding: 0.5em;
-    background-color: rgba(0,0,0,0.1);
+    background-color: #f5f7ff;
     justify-content: space-evenly;
     border-radius: 5px;
 }
@@ -306,6 +310,33 @@ footer {
 
 .project-details {
     margin: 1em;
+}
+
+.footer-container {
+    min-height: var(--footer-height);
+}
+
+.footer-content {
+    color: white;
+    justify-content: space-between;
+}
+
+.footer-content-item {
+    align-items: center;
+}
+
+.footer-content-left {
+    margin-left: 1em;
+}
+
+.footer-content-right {
+    margin-right: 1em;
+}
+
+.footer-site-address {
+    align-content: flex-end;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 767px) {
