@@ -365,6 +365,11 @@ footer {
     margin-right: 1em;
 }
 
+.footer-contact-text {
+    font-size: 18px;
+    font-weight:600;
+}
+
 .footer-icon {
     margin: 0.5em;
     height: var(--footer-icon-size);
