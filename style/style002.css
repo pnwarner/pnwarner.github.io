@@ -214,6 +214,10 @@ footer {
     width: 100%;
 }
 
+.width-90 {
+    width: 90%;
+}
+
 .margin-left {
     margin-left: 1em;
 }
@@ -373,10 +377,9 @@ footer {
     margin-bottom: 1em;
 }
 
-.contact-me {
-    margin-bottom: 5px;
-}
 
+  /* Mobile Styles */
+  /* For screens no wider than 767px */
 @media only screen and (max-width: 767px) {
     /* Your mobile styles here */
     body {
