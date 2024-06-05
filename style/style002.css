@@ -15,6 +15,8 @@
     --accent-text-color: #FFFFFF;
 
     --article-top-margin: 4em;
+
+    --footer-icon-size: 48px;
 }
 
 *, *::before, *::after {
@@ -208,6 +210,18 @@ footer {
     justify-content: center;
 }
 
+.full-width {
+    width: 100%;
+}
+
+.margin-left {
+    margin-left: 1em;
+}
+
+.margin-right {
+    margin-right: 1em;
+}
+
 .nav-left {
     margin-left: 1em;
 }
@@ -312,11 +326,25 @@ footer {
     margin: 1em;
 }
 
+.footer-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.git-username {
+    color: white;
+}
+
+.git-domain {
+    color: var(--article-bg-color);
+}
+
 .footer-container {
     min-height: var(--footer-height);
 }
 
 .footer-content {
+    flex-direction: row;
     color: white;
     justify-content: space-between;
 }
@@ -333,10 +361,20 @@ footer {
     margin-right: 1em;
 }
 
+.footer-icon {
+    margin: 0.5em;
+    height: var(--footer-icon-size);
+    width: var(--footer-icon-size);
+}
+
 .footer-site-address {
     align-content: flex-end;
     text-align: center;
     margin-bottom: 1em;
+}
+
+.contact-me {
+    margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -367,6 +405,19 @@ footer {
 
     .project-info-container {
         align-self: flex-start;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer-content-left {
+        margin-left: 0;
+    }
+
+    .footer-content-right {
+        margin-right: 0;
     }
 }
   
