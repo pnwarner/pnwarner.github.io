@@ -6,9 +6,9 @@
     --footer-height: 200px;
     --footer-bg-color: #202C37;
 
-    --heading-font: Lato;
-    --body-font: Helvetica;
-    --accent-font: Montserrat;
+    --heading-font: "Raleway", sans-serif;
+    --body-font: "Merriweather Sans", sans-serif;
+    --accent-font: "Abril Fatface", serif;
 
     --body-text-color: #333333;
     --heading-text-color: #28395C;
@@ -105,6 +105,12 @@ footer {
     font-weight: 600;
 }
 
+.nav-logo-link {
+    color: var(--accent-text-color);
+    text-decoration: none;
+    font-family: var(--accent-font);
+}
+
 .nav-image {
     height: 55px;
     width: 55px;
@@ -116,6 +122,7 @@ footer {
 .nav-link {
     color: var(--article-bg-color);
     text-decoration: none;
+    font-family: var(--accent-font);
 }
 
 .nav-link:hover {
@@ -263,7 +270,7 @@ footer {
     align-self: center;
     margin: 1em 0 1em 1em;
     flex-direction: column;
-    width: 45%;
+    width: 30%;
     min-width: 200px;
 }
 
@@ -316,6 +323,7 @@ footer {
     background-color: #f5f7ff;
     justify-content: space-evenly;
     border-radius: 5px;
+    width: 70%;
 }
 
 .project-info-list {
@@ -365,9 +373,15 @@ footer {
     margin-right: 1em;
 }
 
+.footer-logo-link {
+    text-decoration: none;
+    font-family: var(--accent-font);
+}
+
 .footer-contact-text {
     font-size: 18px;
     font-weight:600;
+    font-family: var(--accent-font);
 }
 
 .footer-icon {
@@ -413,6 +427,7 @@ footer {
 
     .project-info-container {
         align-self: flex-start;
+        width: initial;
     }
 
     .footer-content {
