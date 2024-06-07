@@ -12,8 +12,10 @@ class Server_Item  {
     display_status = function() {
         let textbox = document.getElementById(this.text_element);
         textbox.innerHTML = '';
-        if (this.status != this.server_name + " Timed out. [DOWN]"){
-            textbox.innerHTML = '<a class="server-link-a" href="' + this.url + '"><span class="server-link">' + this.server_name + ' (</span> <span class="large-bold-white">' + this.req_time + '</span><span class="server-link">ms ) [UP]</span></a>';
+        if (this.status != this.server_name + " Timed out. Server is DOWN."){
+            // textbox.innerHTML = '<a class="server-link-a" href="' + this.url + '"><span class="server-link">' + this.server_name + ' (</span> <span class="large-bold-white">' + this.req_time + '</span><span class="server-link">ms ) [UP]</span></a>';
+            // textbox.innerHTML = `<a class="server-link-a" href="${this.url}"><span class="server-link">${this.server_name} (</span> <span class="large-bold-white">${this.req_time}</span><span class="server-link">ms ) [UP]</span></a>`;
+            textbox.innerHTML = `<a class="server-link-a" href="${this.url}"><span class="server-link">${this.server_name} Up - </span><span class="ms-color">${this.req_time}</span><span class="server-link">ms</span></a>`;
         } else {
             textbox.innerHTML = this.status;
         }
@@ -79,7 +81,7 @@ async function time_site_response(Server_Item) {
 async function check_site(Server_Item) {
     let response = await time_site_response(Server_Item);
     if (response == false){
-        Server_Item.status = Server_Item.server_name + " Timed out. [DOWN]";
+        Server_Item.status = Server_Item.server_name + " Timed out. Server is DOWN.";
         Server_Item.req_time = 0;
     }
     Server_Item.display_status();
