@@ -26,6 +26,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pnwarner.github.io/style/style.css">
+        <link rel="stylesheet" href="style/site-status.css">
     </head>
     <body>
         <header>
@@ -138,6 +139,26 @@
                         </div>
                         <div class="flexbox flex-column project-info-container"><!--Project Info-->
                             <p><span class="bold-text">Project Summary:</span> <a href="https://paradoxresearch.net/">ParadoxResearch.net</a> is a dynamic platform that showcases my full-stack development expertise.  At its core lies a custom PHP content management system (<a href="https://github.com/pnwarner/crmbl">crmbl CMS</a>) I built, which seamlessly handles hosting multiple domains (<a href="https://paradoxresearch.net/?about">explore the examples!</a>).  This project not only demonstrates my back-end development skills but also serves as a springboard for future educational resources.  The site will eventually offer tutorials on do-it-yourself home server and website hosting, reflecting the very functionality it exemplifies – running entirely on a home-based cluster of load-balanced servers.</p>
+                            <!--ParadoxResearch.net Server Status-->
+                            <h4 class="site-status-label">Site Status:</h4>
+                            <section id="server-demo-info" class="flexbox server-demo-info">
+                                <div id="server-4-wrapper" class="flexbox server-demo-info-card">
+                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
+                                    <p id="server-4-text" class="server-title">Server 4</p>
+                                </div>
+                                <div id="server-3-wrapper" class="flexbox server-demo-info-card">
+                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
+                                    <p id="server-3-text" class="server-title">Server 3</p>
+                                </div>
+                                <div id="server-2-wrapper" class="flexbox server-demo-info-card">
+                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
+                                    <p id="server-2-text" class="server-title">Server 2</p>
+                                </div>
+                                <div id="server-1-wrapper" class="flexbox server-demo-info-card">
+                                    <div class="server-svg-image bg-svg server-demo-info-card-icon"></div>
+                                    <p id="server-1-text" class="server-title">Server 1</p>
+                                </div>
+                            </section>
                             <div class="project-details">
                                 <h4>Project Scope:</h4>
                                 <details>
@@ -334,5 +355,6 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript" src="script/site-status/site-status.js"></script>
     </body>
 </html>

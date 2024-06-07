@@ -1,0 +1,129 @@
+.server-demo-info {
+    flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: #ffffff;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	border-radius: 5px;
+}
+
+.server-demo-info-card {
+    flex-flow: row;
+    background-color: #e0e7eb;
+	color: #333333;
+	padding: 5px;
+	height: max-content;
+	border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.server-demo-info-card-icon {
+	height: 32px;
+	width: 32px;
+	margin-right: 0.25em;
+}
+
+.server-demo-info-card p {
+	margin-right: 0.25em;
+	margin-left: auto;
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
+.large-bold-white {
+	font-size: 1.1em;
+	color: white;
+	font-weight: bold;
+}
+
+.server-link {
+	color: #333333;;
+}
+
+.server-link-a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.server-link-a:hover {
+    color: #333333;
+}
+
+.server-link-a:active {
+    color: #333333;
+}
+
+.server-link-a:visited {
+    color: #333333;
+}
+
+.ms-color {
+    color: darkblue;
+}
+
+.server-svg-image {
+    align-self: center;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%2328395c%7D%3C/style%3E%3Cpath d='M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z'/%3E%3C/svg%3E ");
+}
+
+.server-title {
+    align-self: flex-end;
+}
+
+.bg-svg {
+	background-position: center;
+	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.site-status-label {
+    margin-top: 1em;
+}
+
+  /* Mobile Styles */
+  /* For screens no wider than 767px */
+  @media only screen and (max-width: 767px) {
+    /* Your mobile styles here */
+    body {
+        background-color: var(--article-bg-color);
+    }
+
+    .server-demo-info-card {
+        min-width: 96%;
+        align-items: center;
+    }
+
+    .server-demo-info-card p {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .server-title {
+        width: initial;
+        text-align: center;
+    }
+}
+  
+  /* Tablet Styles */
+  /* For screens between 768px and 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Your tablet styles here */
+    body {
+        background-color: var(--article-bg-color);
+    }
+
+    .server-demo-info-card {
+        min-width: 45%;
+    }
+}
+  
+  /* Desktop Styles */
+  /* For screens wider than 1024px */
+@media only screen and (min-width: 1024px) {
+    /* Your desktop styles here */
+    body {
+        background-color: var(--article-bg-color);
+    }
+}
